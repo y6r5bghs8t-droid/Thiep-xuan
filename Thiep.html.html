@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thiệp Xuân Bính Ngọ 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:radial-gradient(circle at bottom,#1a0000,#000);
+    overflow:hidden;
+}
+
+.card-container{ perspective:2000px; }
+
+.card{
+    width:560px;
+    height:720px;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:1.6s;
+    cursor:pointer;
+}
+
+.card.open{ transform:rotateY(-180deg); }
+
+.card-face{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:25px;
+    backface-visibility:hidden;
+    box-shadow:0 40px 100px rgba(0,0,0,0.9);
+    overflow:hidden;
+}
+
+.card-front{
+    background:linear-gradient(135deg,#7a0000,#d50000);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:gold;
+    font-size:40px;
+    font-family:'Playfair Display', serif;
+}
+
+.card-back{
+    background:linear-gradient(#000,#2b0000);
+    transform:rotateY(180deg);
+    position:relative;
+    color:gold;
+    text-align:center;
+}
+
+.message{
+    position:absolute;
+    top:60px;
+    width:100%;
+    z-index:5;
+    font-family:'Dancing+Script', cursive;
+}
+
+.message h1{
+    font-size:55px;
+    margin:0;
+    text-shadow:0 0 20px gold;
+}
+
+.message p{
+    font-size:35px;
+    margin-top:10px;
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    background:gold;
+    color:#7a0000;
+    font-weight:bold;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.branch-svg{
+    position:absolute;
+    bottom:90px;
+    left:0;
+    width:100%;
+    z-index:3;
+}
+
+.flower{
+    animation:bloom 0.9s ease-out forwards;
+    transform-origin:center;
+    transform:scale(0);
+}
+
+@keyframes bloom{
+    100%{ transform:scale(1); }
+}
+
+canvas{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card-container">
+<div class="card" onclick="toggleCard()">
+
+<div class="card-face card-front">
+🎉 MỞ THIỆP XUÂN 🎉
+</div>
+
+<div class="card-face card-back">
+
+<div class="message">
+<h1>Xuân Bính Ngọ 2026</h1>
+<p>An Khang – Thịnh Vượng</p>
+
+<button class="btn" onclick="openMusic(event)">
+🎵 Mở Nhạc Tết
+</button>
+
+</div>
+
+<!-- SVG HOA MAI -->
+<svg class="branch-svg" viewBox="0 0 560 360">
+
+<defs>
+  <radialGradient id="petalGold" cx="50%" cy="40%" r="70%">
+    <stop offset="0%" stop-color="#fffce0"/>
+    <stop offset="40%" stop-color="#ffe066"/>
+    <stop offset="70%" stop-color="#ffc107"/>
+    <stop offset="100%" stop-color="#b8860b"/>
+  </radialGradient>
+
+  <radialGradient id="pollenGold" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="#fff8c6"/>
+    <stop offset="100%" stop-color="#ff9800"/>
+  </radialGradient>
+</defs>
+
+<!-- Cành chính -->
+<path d="M40 300 Q180 120 460 200"
+stroke="#4e342e"
+stroke-width="20"
+fill="none"
+stroke-linecap="round"/>
+
+<!-- Nhánh phụ -->
+<path d="M180 180 Q160 150 140 140"
+stroke="#4e342e"
+stroke-width="9"
+fill="none"
+stroke-linecap="round"/>
+
+<path d="M300 190 Q280 160 260 150"
+stroke="#4e342e"
+stroke-width="9"
+fill="none"
+stroke-linecap="round"/>
+
+<path d="M400 200 Q380 170 360 160"
+stroke="#4e342e"
+stroke-width="9"
+fill="none"
+stroke-linecap="round"/>
+
+<!-- ===== HOA 1 ===== -->
+<g transform="translate(140,140)">
+<g class="flower" style="animation-delay:0.5s">
+<ellipse cx="0" cy="-35" rx="22" ry="36" fill="url(#petalGold)"/>
+<ellipse cx="0" cy="-35" rx="22" ry="36" fill="url(#petalGold)" transform="rotate(72)"/>
+<ellipse cx="0" cy="-35" rx="22" ry="36" fill="url(#petalGold)" transform="rotate(144)"/>
+<ellipse cx="0" cy="-35" rx="22" ry="36" fill="url(#petalGold)" transform="rotate(216)"/>
+<ellipse cx="0" cy="-35" rx="22" ry="36" fill="url(#petalGold)" transform="rotate(288)"/>
+<circle r="12" fill="url(#pollenGold)"/>
+</g>
+</g>
+
+<!-- HOA 2 -->
+<g transform="translate(260,150)">
+<g class="flower" style="animation-delay:1s">
+<ellipse cx="0" cy="-30" rx="18" ry="30" fill="url(#petalGold)"/>
+<ellipse cx="0" cy="-30" rx="18" ry="30" fill="url(#petalGold)" transform="rotate(72)"/>
+<ellipse cx="0" cy="-30" rx="18" ry="30" fill="url(#petalGold)" transform="rotate(144)"/>
+<ellipse cx="0" cy="-30" rx="18" ry="30" fill="url(#petalGold)" transform="rotate(216)"/>
+<ellipse cx="0" cy="-30" rx="18" ry="30" fill="url(#petalGold)" transform="rotate(288)"/>
+<circle r="10" fill="url(#pollenGold)"/>
+</g>
+</g>
+
+<!-- HOA 3 -->
+<g transform="translate(360,160)">
+<g class="flower" style="animation-delay:1.5s">
+<ellipse cx="0" cy="-25" rx="15" ry="25" fill="url(#petalGold)"/>
+<ellipse cx="0" cy="-25" rx="15" ry="25" fill="url(#petalGold)" transform="rotate(72)"/>
+<ellipse cx="0" cy="-25" rx="15" ry="25" fill="url(#petalGold)" transform="rotate(144)"/>
+<ellipse cx="0" cy="-25" rx="15" ry="25" fill="url(#petalGold)" transform="rotate(216)"/>
+<ellipse cx="0" cy="-25" rx="15" ry="25" fill="url(#petalGold)" transform="rotate(288)"/>
+<circle r="8" fill="url(#pollenGold)"/>
+</g>
+</g>
+
+</svg>
+
+<canvas id="fireworks"></canvas>
+
+</div>
+</div>
+</div>
+
+<script>
+const card=document.querySelector(".card");
+const canvas=document.getElementById("fireworks");
+const ctx=canvas.getContext("2d");
+canvas.width=560;
+canvas.height=720;
+
+let particles=[];
+let started=false;
+
+function toggleCard(){
+card.classList.toggle("open");
+if(card.classList.contains("open") && !started){
+startFireworks();
+started=true;
+}
+}
+
+function openMusic(e){
+e.stopPropagation();
+window.open("https://youtu.be/gOtfJ151ue4?list=RDgOtfJ151ue4s://www.youtube.com/watch?v=RjvY8Rk9zqk","_blank");
+}
+
+function startFireworks(){
+setInterval(()=>{
+let x=Math.random()*canvas.width;
+let y=Math.random()*canvas.height/2;
+for(let i=0;i<80;i++){
+particles.push({
+x:x,y:y,
+angle:Math.random()*2*Math.PI,
+speed:Math.random()*4+2,
+alpha:1
+});
+}
+},1300);
+animate();
+}
+
+function animate(){
+ctx.fillStyle="rgba(0,0,0,0.25)";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+particles.forEach((p,i)=>{
+p.x+=Math.cos(p.angle)*p.speed;
+p.y+=Math.sin(p.angle)*p.speed;
+p.alpha-=0.01;
+ctx.fillStyle="hsla("+Math.random()*360+",100%,60%,"+p.alpha+")";
+ctx.beginPath();
+ctx.arc(p.x,p.y,2.5,0,2*Math.PI);
+ctx.fill();
+if(p.alpha<=0) particles.splice(i,1);
+});
+
+requestAnimationFrame(animate);
+}
+</script>
+
+
+</body>
+</html>
+
